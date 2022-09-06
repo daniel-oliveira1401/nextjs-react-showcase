@@ -1,0 +1,42 @@
+[
+	{
+		"url": "react-facts",
+		"title": "React Facts",
+		"description": "Some quick facts about React."
+	},
+	{
+		"url": "digital-business-card",
+		"title": "Digital Business Card",
+		"description": "A business card with some info about me."
+	},
+	{
+		"url": "travel-journal",
+		"title": "Travel Journal",
+		"description": "A travel journal with some places that someone, not me, has already visited."
+	},
+	{
+		"url": "airbnb-clone",
+		"title": "Airbnb Clone",
+		"description": "A small clone of a section of the AirBnb website."
+	},
+	{
+		"url": "notes-app",
+		"title": "Notes App",
+		"description": "An app to keep some notes for yourself. It works, try using it."
+	},
+	{
+		"url": "quizzical-app",
+		"title": "Quizzical App",
+		"description": "Click start and try to get those questions right :)."
+	},
+	{
+		"url": "meme-generator",
+		"title": "Meme Generator",
+		"description": "Choose the right image, then the right text and make someone laugh 😂."
+	},
+	{
+		"url": "tenzies",
+		"title": "Tenzies!",
+		"description": "This is way more fun than it looks. Give it a try :)."
+	}
+]
