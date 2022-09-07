@@ -1,0 +1,144 @@
+@import "../global/utilities";
+
+.projects_list {
+	display: none;
+	@include breakpoint-up(medium) {
+		display: flex;
+	}
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
+	padding: 1rem;
+	.project_link {
+		font-weight: 300;
+		font-size: 16px;
+		padding: 0.5rem 1rem;
+		border: 1px solid black;
+		cursor: pointer;
+		user-select: none;
+
+		&[dataactive="true"] {
+			background-color: black;
+			color: white;
+			font-weight: 400;
+		}
+	}
+}
+
+.project {
+	display: flex;
+	flex-direction: column;
+
+	&__text {
+		max-width: 500px;
+		margin-block: 1rem;
+		display: flex;
+		align-items: center;
+		@include breakpoint-up(medium) {
+			margin-top: 0;
+			margin-inline: auto;
+		}
+
+		.text_container {
+			padding-inline: 0.5rem;
+		}
+
+		//arrows
+		img {
+			max-height: 24px;
+
+			&[datavalid="false"] {
+				opacity: 0.15;
+				pointer-events: none;
+			}
+		}
+		.arrow__left {
+			margin-right: auto;
+			margin-left: 1rem;
+		}
+		.arrow__right {
+			margin-left: auto;
+			transform: rotate(180deg);
+			margin-right: 1rem;
+		}
+		@include breakpoint-up(medium) {
+			//arrows
+			img {
+				display: none;
+			}
+		}
+	}
+
+	&__title {
+		font-size: 18px;
+		@include breakpoint-up(medium) {
+			font-size: 20px;
+		}
+		font-weight: 400;
+		text-align: center;
+	}
+
+	&__description {
+		font-size: 14px;
+		font-weight: 300;
+		text-align: center;
+		@include breakpoint-up(medium) {
+			font-size: 16px;
+		}
+	}
+
+	.dots {
+		@include breakpoint-up(medium) {
+			display: none;
+		}
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		padding-bottom: 1rem;
+		.dot {
+			height: 5px;
+			width: 5px;
+			border-radius: 50%;
+			background-color: rgba($color: #000000, $alpha: 0.1);
+
+			&[dataactive="true"] {
+				background-color: rgba($color: #000000, $alpha: 1);
+			}
+		}
+	}
+
+	&__container {
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+
+		//arrows
+		img {
+			margin-inline: 1rem;
+			display: none;
+			&[datavalid="false"] {
+				opacity: 0.15;
+				pointer-events: none;
+			}
+			cursor: pointer;
+		}
+
+		.arrow__right {
+			transform: rotate(180deg);
+		}
+
+		@include breakpoint-up(medium) {
+			img {
+				display: block;
+			}
+		}
+
+		iframe {
+			background-color: white;
+			flex-grow: 1;
+			position: relative;
+			align-self: stretch;
+			border: 2px solid black;
+		}
+	}
+}

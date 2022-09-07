@@ -1,3 +1,5 @@
+@import "../styles/global/utilities";
+
 .layout {
 	min-height: 100vh;
 	display: flex;
@@ -55,6 +57,11 @@
 			}
 
 			&__projects {
+				padding-block: 0;
+				> a {
+					padding-block: 1rem;
+					display: inline-block;
+				}
 				&:hover,
 				&:focus-within {
 					.dropdown {
@@ -102,13 +109,16 @@
 		align-items: center;
 		margin-top: auto;
 		justify-content: center;
-		padding-top: 1rem;
-
-		margin-bottom: 0.75rem;
+		padding-top: 0.5rem;
+		font-weight: 300;
+		margin-bottom: 0.5rem;
 
 		img {
 			margin-inline: 0.25rem;
-			height: 24px;
+			height: 18px;
+			@include breakpoint-up(medium) {
+				height: 24px;
+			}
 		}
 	}
 }

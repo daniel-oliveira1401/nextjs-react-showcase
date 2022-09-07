@@ -10,11 +10,21 @@ export default function Projects() {
 			<Head>
 				<title>Projects</title>
 			</Head>
+			<p className={styles.header}>
+				These projects are all interactive, try scrolling and pushing the
+				buttons!
+			</p>
 			<section className={styles.projects}>
 				{projectsData.map((project) => {
 					return (
 						<Link key={project.url} href={`/projects/${project.url}`}>
-							<div className={styles.project}>{project.title}</div>
+							<div className={styles.project}>
+								<h2 className={styles.project__title}>{project.title}</h2>
+								<hr />
+								<p className={styles.project__description}>
+									{project.description}
+								</p>
+							</div>
 						</Link>
 					);
 				})}

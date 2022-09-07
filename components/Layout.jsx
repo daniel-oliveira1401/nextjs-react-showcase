@@ -17,7 +17,7 @@ function NavLink({ children, href, linkClass }) {
 		<a
 			href={href}
 			onClick={handleClick}
-			className={`next-navlink ${linkClass || ""} ${linkStateClass}`}
+			className={`${linkClass || ""} ${linkStateClass}`}
 			tabIndex="0"
 		>
 			{children}
@@ -36,30 +36,30 @@ export default function Layout(props) {
 						<NavLink linkClass={styles.links__home} href={"/"}>
 							Home
 						</NavLink>
-						<div>
-							<div
-								tabIndex="0"
-								className={`${styles.links__projects} ${
-									router.asPath.includes("/projects") ? styles.active_link : ""
-								}`}
-							>
-								<NavLink href={"/projects"}>Projects</NavLink>
-								<img
-									className={styles.dropdown__icon}
-									src="/dropdown.svg"
-									alt=""
-								/>
-								<ul className={styles.dropdown}>
-									{projectsData.map((project) => {
-										return (
-											<Link href={`/projects/${project.url}`} key={project.url}>
-												<a className={styles.dropdown__link}>{project.title}</a>
-											</Link>
-										);
-									})}
-								</ul>
-							</div>
+
+						<div
+							tabIndex="0"
+							className={`${styles.links__projects} ${
+								router.asPath.includes("/projects") ? styles.active_link : ""
+							}`}
+						>
+							<NavLink href={"/projects"}>Projects</NavLink>
+							<img
+								className={styles.dropdown__icon}
+								src="/dropdown.svg"
+								alt=""
+							/>
+							<ul className={styles.dropdown}>
+								{projectsData.map((project) => {
+									return (
+										<Link href={`/projects/${project.url}`} key={project.url}>
+											<a className={styles.dropdown__link}>{project.title}</a>
+										</Link>
+									);
+								})}
+							</ul>
 						</div>
+
 						<NavLink linkClass={styles.links__info} href={"/info"}>
 							Info
 						</NavLink>
