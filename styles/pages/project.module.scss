@@ -17,7 +17,7 @@
 		cursor: pointer;
 		user-select: none;
 
-		&[dataactive="true"] {
+		&[data-active="true"] {
 			background-color: black;
 			color: white;
 			font-weight: 400;
@@ -47,7 +47,7 @@
 		img {
 			max-height: 24px;
 
-			&[datavalid="false"] {
+			&[data-valid="false"] {
 				opacity: 0.15;
 				pointer-events: none;
 			}
@@ -101,7 +101,7 @@
 			border-radius: 50%;
 			background-color: rgba($color: #000000, $alpha: 0.1);
 
-			&[dataactive="true"] {
+			&[data-active="true"] {
 				background-color: rgba($color: #000000, $alpha: 1);
 			}
 		}
@@ -116,7 +116,7 @@
 		img {
 			margin-inline: 1rem;
 			display: none;
-			&[datavalid="false"] {
+			&[data-valid="false"] {
 				opacity: 0.15;
 				pointer-events: none;
 			}

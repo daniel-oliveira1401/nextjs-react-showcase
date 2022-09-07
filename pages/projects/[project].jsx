@@ -38,7 +38,7 @@ export default function Project({ project, projects }) {
 							<Link href={projectData.url}>
 								<h3
 									key={projectData.url}
-									dataactive={(projectData.url == project.url).toString()}
+									data-active={(projectData.url == project.url).toString()}
 									className={styles.project_link}
 								>
 									{projectData.title}
@@ -53,7 +53,7 @@ export default function Project({ project, projects }) {
 							className={styles.arrow__left}
 							src="/arrow-horizontal.svg"
 							alt=""
-							datavalid={isPrevValid.toString()}
+							data-valid={isPrevValid.toString()}
 						/>
 					</Link>
 					<div className={styles.text_container}>
@@ -65,7 +65,7 @@ export default function Project({ project, projects }) {
 							className={styles.arrow__right}
 							src="/arrow-horizontal.svg"
 							alt=""
-							datavalid={isNextValid.toString()}
+							data-valid={isNextValid.toString()}
 						/>
 					</Link>
 				</div>
@@ -74,7 +74,7 @@ export default function Project({ project, projects }) {
 						return (
 							<span
 								className={styles.dot}
-								dataactive={(projectData.url == project.url).toString()}
+								data-active={(projectData.url == project.url).toString()}
 							></span>
 						);
 					})}
@@ -85,7 +85,7 @@ export default function Project({ project, projects }) {
 							className={styles.arrow__left}
 							src="/arrow-horizontal.svg"
 							alt=""
-							datavalid={isPrevValid.toString()}
+							data-valid={isPrevValid.toString()}
 						/>
 					</Link>
 					<iframe src={`../../projects/${project.url}/index.html`}></iframe>
@@ -94,7 +94,7 @@ export default function Project({ project, projects }) {
 							className={styles.arrow__right}
 							src="/arrow-horizontal.svg"
 							alt=""
-							datavalid={isNextValid.toString()}
+							data-valid={isNextValid.toString()}
 						/>
 					</Link>
 				</div>
