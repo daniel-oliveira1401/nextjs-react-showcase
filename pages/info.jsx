@@ -59,7 +59,10 @@ export default function Info() {
 				</p>
 				<p>
 					You can also take a look at the code behind this app in the{" "}
-					<a href="" className={styles.link}>
+					<a
+						href="https://github.com/daniel-oliveira1401/nextjs-react-showcase"
+						className={styles.link}
+					>
 						Github Respository
 					</a>
 				</p>
