@@ -6,6 +6,14 @@ export default function Document() {
 			<Head>
 				<meta charSet="UTF-8" />
 				<meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+				<meta property="og:title" content="React Projects Showcase" />
+				<meta
+					name="og:description"
+					content="A showcase of some of my React projecs, using Nextjs."
+				/>
+
+				<meta property="og:image" content="/og_image.jpg" />
+				<meta property="og:type" content="website" />
 
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 				<link
