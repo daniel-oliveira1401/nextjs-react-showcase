@@ -8,10 +8,12 @@
 	flex-grow: 1;
 	.hero {
 		margin-top: 1rem;
+
 		@include breakpoint-up(large) {
 			height: 50vh;
 			margin-top: 0;
 			flex-direction: row;
+			padding-inline: 1rem;
 		}
 		display: flex;
 		flex-direction: column;
