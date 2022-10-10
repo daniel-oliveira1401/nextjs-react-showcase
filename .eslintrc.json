@@ -1,6 +1,7 @@
 {
 	"extends": "next/core-web-vitals",
 	"rules": {
-		"react/jsx-key": [0, { "checkFramentShortHand": false }]
+		"react/jsx-key": [0, { "checkFramentShortHand": false }],
+		"react/no-unknown-property": 0
 	}
 }
